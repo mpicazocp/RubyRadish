@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8963173163037987296}
   - component: {fileID: 8963173163037987297}
-  - component: {fileID: 8963173163037987303}
+  - component: {fileID: 3868445802067247869}
   m_Layer: 6
   m_Name: knife_platform
   m_TagString: Untagged
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &8963173163037987303
-PolygonCollider2D:
+--- !u!61 &3868445802067247869
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -98,7 +98,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.04}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -108,11 +108,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.3931756, y: 0.05063762}
-      - {x: -0.3931708, y: -0.023248164}
-      - {x: -0.047413755, y: -0.01988578}
-      - {x: -0.049072757, y: -0.09610705}
-      - {x: 0.40036884, y: -0.10126458}
-      - {x: 0.39475614, y: 0.041275203}
+  serializedVersion: 2
+  m_Size: {x: 0.78, y: 0.16}
+  m_EdgeRadius: 0

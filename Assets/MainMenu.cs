@@ -6,11 +6,12 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public void PlayGame(){
-        SceneManager.LoadScene("level0");
+        SceneManager.LoadScene("InfoScene");
     }
 
     public void QuitGame(){
         SceneManager.LoadScene("Credits");
     }
+
 }
 

@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Ruby : MonoBehaviour
 {
     public float horizontal;
     public float speed = 2f;
     public float jumpingPower = 2f;
-    public bool isFacingRight = true;
+    public bool isFacingRight = false;
 
     public int score = 0;
 
@@ -59,6 +60,8 @@ public class Ruby : MonoBehaviour
         }
         else if (other.gameObject.tag == "GOAL") {
             Debug.Log("WIN!");
+            Destroy(other.gameObject);
+            SceneManager.LoadScene("level1");
         }
         else if (other.gameObject.tag == "POINT") {
             Debug.Log("POINT");

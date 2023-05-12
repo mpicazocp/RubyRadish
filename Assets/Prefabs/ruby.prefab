@@ -124,7 +124,8 @@ MonoBehaviour:
   horizontal: 0
   speed: 3
   jumpingPower: 6
-  isFacingRight: 1
+  isFacingRight: 0
+  score: 0
   rb: {fileID: 7367086638811512481}
   groundCheck: {fileID: 5903346076398510068}
   groundLayer:

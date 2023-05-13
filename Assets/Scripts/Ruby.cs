@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Ruby : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Ruby : MonoBehaviour
     public bool isFacingRight = false;
 
     public int score = 0;
+    public GameObject canvas;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -56,16 +58,15 @@ public class Ruby : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "DEATH") {
-            Debug.Log("DEATH");
+            SceneManager.LoadScene("MainMenu");
         }
         else if (other.gameObject.tag == "GOAL") {
-            Debug.Log("WIN!");
             Destroy(other.gameObject);
             SceneManager.LoadScene("level1");
         }
         else if (other.gameObject.tag == "POINT") {
-            Debug.Log("POINT");
             score++;
+            canvas.GetComponent<TMP_Text>().text = "Score: " + score.ToString();
             Destroy(other.gameObject);
         }
     }

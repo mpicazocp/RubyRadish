@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5879640188038401182}
   - component: {fileID: 5879640188038401183}
-  - component: {fileID: 5879640188038401181}
-  m_Layer: 0
+  - component: {fileID: 584103402942652468}
+  m_Layer: 6
   m_Name: Idle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,8 +85,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &5879640188038401181
-PolygonCollider2D:
+--- !u!61 &584103402942652468
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,15 +108,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.069759384, y: 0.07800283}
-      - {x: -0.06953214, y: 0.08007922}
-      - {x: -0.06996476, y: 0.07037795}
-      - {x: -0.07996468, y: 0.06871209}
-      - {x: -0.07996476, y: -0.06810543}
-      - {x: -0.0690681, y: -0.07810542}
-      - {x: 0.070465915, y: -0.07939335}
-      - {x: 0.07996468, y: -0.06871207}
-      - {x: 0.080896586, y: 0.06742419}
-      - {x: 0.07093183, y: 0.06909}
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0

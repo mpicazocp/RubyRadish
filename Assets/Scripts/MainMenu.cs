@@ -21,5 +21,8 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("level0");
     }
 
+    public void GoToLevel1(){
+        SceneManager.LoadScene("level1");
+    }
 }
 

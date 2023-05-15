@@ -267,6 +267,7 @@ MonoBehaviour:
   isFacingRight: 0
   score: 0
   canvas: {fileID: 7809250345211287254}
+  ScoreKeeper: {fileID: 3885541412728307055, guid: 0b2f164461b02a5389814204e4d574de, type: 3}
   rb: {fileID: 7367086638811512481}
   groundCheck: {fileID: 5903346076398510068}
   groundLayer:

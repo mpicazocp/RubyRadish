@@ -13,10 +13,16 @@ public class Ruby : MonoBehaviour
 
     public int score = 0;
     public GameObject canvas;
+    public GameObject ScoreKeeper;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    void Start() {
+        score = ScoreKeeper.GetComponent<ScoreKeeper>().playerScore;
+        canvas.GetComponent<TMP_Text>().text = "Score: " + score.ToString();
+    }
 
     void Update()
     {
@@ -70,6 +76,7 @@ public class Ruby : MonoBehaviour
         }
         else if (other.gameObject.tag == "POINT") {
             score++;
+            ScoreKeeper.GetComponent<ScoreKeeper>().playerScore = score;
             canvas.GetComponent<TMP_Text>().text = "Score: " + score.ToString();
             Destroy(other.gameObject);
         }

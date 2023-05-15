@@ -58,7 +58,7 @@ public class Ruby : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "DEATH") {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("YouLose");
         }
         else if (other.gameObject.tag == "GOAL") {
             Destroy(other.gameObject);

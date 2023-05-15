@@ -68,7 +68,7 @@ public class Ruby : MonoBehaviour
         }
         else if (other.gameObject.tag == "GOAL") {
             Destroy(other.gameObject);
-            SceneManager.LoadScene("level1");
+            SceneManager.LoadScene("LevelTransition");
         }
         else if (other.gameObject.tag == "GOAL2") {
             Destroy(other.gameObject);

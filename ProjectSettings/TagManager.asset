@@ -7,6 +7,7 @@ TagManager:
   - DEATH
   - GOAL
   - POINT
+  - GOAL2
   layers:
   - Default
   - TransparentFX

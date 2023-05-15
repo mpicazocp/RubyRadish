@@ -64,6 +64,10 @@ public class Ruby : MonoBehaviour
             Destroy(other.gameObject);
             SceneManager.LoadScene("level1");
         }
+        else if (other.gameObject.tag == "GOAL2") {
+            Destroy(other.gameObject);
+            SceneManager.LoadScene("Credits");
+        }
         else if (other.gameObject.tag == "POINT") {
             score++;
             canvas.GetComponent<TMP_Text>().text = "Score: " + score.ToString();

@@ -66,7 +66,7 @@ public class Ruby : MonoBehaviour
 
     IEnumerator OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "DEATH") {
-            myAnim.Play("deadruby");
+            myAnim.Play("deadrubynew");
             yield return new WaitForSeconds(3.0f);
             SceneManager.LoadScene("YouLose");
         }

@@ -1365,7 +1365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9613c564b32948618d586223849e335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.1
+  delay: 0.05
   fullText: Hi! My name is Ruby. Thank goodness you showed up, I need your help! 
     I live in the ground with the rest of the radishes... but next thing I knew I
     ended up in this scary kitchen :(  All the other radishes always warned me to

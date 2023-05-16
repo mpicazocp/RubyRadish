@@ -76,7 +76,7 @@ public class Ruby : MonoBehaviour
             ruby_is_dead = true;
             ScoreKeeper.GetComponent<ScoreKeeper>().playerScore = 0;
             myAnim.SetTrigger("Ruby-death");
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSeconds(1.5f);
             myAnim.ResetTrigger("Ruby-death");
             SceneManager.LoadScene("YouLose");
         }
@@ -84,7 +84,7 @@ public class Ruby : MonoBehaviour
             ruby_is_dead = true;
             ScoreKeeper.GetComponent<ScoreKeeper>().playerScore = 0;
             myAnim.SetTrigger("Ruby-death-fire");
-            yield return new WaitForSeconds(0.75f);
+            yield return new WaitForSeconds(1.5f);
             myAnim.ResetTrigger("Ruby-death-fire");
             SceneManager.LoadScene("YouLose");
         }

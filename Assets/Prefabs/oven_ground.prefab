@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 7389155624149874757}
   m_Layer: 6
   m_Name: Fire
-  m_TagString: DEATH
+  m_TagString: FIRE_DEATH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

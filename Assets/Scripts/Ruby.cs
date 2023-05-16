@@ -16,6 +16,8 @@ public class Ruby : MonoBehaviour
     public GameObject canvas;
     public GameObject ScoreKeeper;
 
+    private bool ruby_is_dead;
+
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -24,6 +26,7 @@ public class Ruby : MonoBehaviour
         score = ScoreKeeper.GetComponent<ScoreKeeper>().playerScore;
         canvas.GetComponent<TMP_Text>().text = "Score: " + score.ToString();
         myAnim = GetComponent<Animator>();
+        ruby_is_dead = false;
     }
 
     void Update()
@@ -45,6 +48,10 @@ public class Ruby : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (ruby_is_dead) {
+            rb.velocity = Vector2.zero;
+            return;
+        }
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
@@ -66,9 +73,19 @@ public class Ruby : MonoBehaviour
 
     IEnumerator OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "DEATH") {
+            ruby_is_dead = true;
             ScoreKeeper.GetComponent<ScoreKeeper>().playerScore = 0;
-            myAnim.Play("deadrubynew");
-            yield return new WaitForSeconds(3.0f);
+            myAnim.SetTrigger("Ruby-death");
+            yield return new WaitForSeconds(0.75f);
+            myAnim.ResetTrigger("Ruby-death");
+            SceneManager.LoadScene("YouLose");
+        }
+        if (other.gameObject.tag == "FIRE_DEATH") {
+            ruby_is_dead = true;
+            ScoreKeeper.GetComponent<ScoreKeeper>().playerScore = 0;
+            myAnim.SetTrigger("Ruby-death-fire");
+            yield return new WaitForSeconds(0.75f);
+            myAnim.ResetTrigger("Ruby-death-fire");
             SceneManager.LoadScene("YouLose");
         }
         else if (other.gameObject.tag == "GOAL") {

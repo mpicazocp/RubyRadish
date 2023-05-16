@@ -10,6 +10,7 @@ public class Ruby : MonoBehaviour
     public float speed = 2f;
     public float jumpingPower = 2f;
     public bool isFacingRight = false;
+    public Animator myAnim;
 
     public int score = 0;
     public GameObject canvas;
@@ -22,6 +23,7 @@ public class Ruby : MonoBehaviour
     void Start() {
         score = ScoreKeeper.GetComponent<ScoreKeeper>().playerScore;
         canvas.GetComponent<TMP_Text>().text = "Score: " + score.ToString();
+        myAnim = GetComponent<Animator>();
     }
 
     void Update()
@@ -62,8 +64,10 @@ public class Ruby : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other) {
+    IEnumerator OnCollisionEnter2D(Collision2D other) {
         if (other.gameObject.tag == "DEATH") {
+            myAnim.Play("deadruby");
+            yield return new WaitForSeconds(3.0f);
             SceneManager.LoadScene("YouLose");
         }
         else if (other.gameObject.tag == "GOAL") {

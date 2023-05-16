@@ -5,10 +5,14 @@ using UnityEngine;
 public class Camera_Follow : MonoBehaviour
 {
     public Transform player;
+    
+    public float speed;
 
     // Update is called once per frame
     void Update () {
-        // transform.position = player.transform.position + new Vector2(0, 0.5f, 0);
-                this.transform.position = new Vector3(player.position.x, player.position.y, this.transform.position.z);
+        var step =  speed * Time.deltaTime; // calculate distance to move
+        var target = player.position;
+        target.z = this.transform.position.z;
+        transform.position = Vector3.MoveTowards(transform.position, target, step);
     }
 }

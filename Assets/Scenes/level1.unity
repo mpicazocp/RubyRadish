@@ -385,10 +385,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 2852506202164712462, guid: e370229c981c5e7ea838749474a36f50, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1896227641}
+    - target: {fileID: 5815490582824084077, guid: e370229c981c5e7ea838749474a36f50, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5815490582824084077, guid: e370229c981c5e7ea838749474a36f50, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 1896227641}
+    - target: {fileID: 5815490582824084077, guid: e370229c981c5e7ea838749474a36f50, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e370229c981c5e7ea838749474a36f50, type: 3}
 --- !u!1001 &492214696

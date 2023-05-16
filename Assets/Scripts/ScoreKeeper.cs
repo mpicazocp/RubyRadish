@@ -9,6 +9,7 @@ public class ScoreKeeper : MonoBehaviour
 
     private void Awake()
     {
+        playerScore = 0;
         // start of new code
         if (Instance != null)
         {

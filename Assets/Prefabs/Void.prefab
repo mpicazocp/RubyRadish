@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5524944083768528430}
   - component: {fileID: 1707985148398816204}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Void
   m_TagString: DEATH
   m_Icon: {fileID: 0}
